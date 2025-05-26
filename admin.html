@@ -59,13 +59,16 @@
     });
     <script src="firebase-config.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
-<script>
+<<script>
 firebase.auth().onAuthStateChanged(function(user) {
   if (!user) {
-    // Belum login, redirect ke halaman login
     window.location.href = "login.html";
+  } else {
+    // Tampilkan email pengguna yang sedang login
+    document.getElementById("welcome-message").innerText = 
+      "Selamat datang, " + user.email + "!";
   }
 });
-  </script>
+</script>
 </body>
 </html>
