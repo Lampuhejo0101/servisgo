@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Montir - ServisGO</title>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="firebase-config.js"></script>
+</head>
+<body>
+  <div class="max-w-md mx-auto mt-20 p-6 bg-white shadow rounded">
+    <h2 class="text-2xl font-bold mb-4">Login Montir/Admin</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" class="w-full border p-2 mb-4" required>
+      <input type="password" id="password" placeholder="Password" class="w-full border p-2 mb-4" required>
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Login</button>
+    </form>
+    <p id="loginError" class="text-red-500 mt-4"></p>
+  </div>
+
+  <script>
+    const auth = firebase.auth();
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      auth.signInWithEmailAndPassword(email, password)
+        .then(() => window.location.href = "admin.html")
+        .catch(error => document.getElementById("loginError").innerText = error.message);
+    });
+  </script>
+</body>
+</html>
