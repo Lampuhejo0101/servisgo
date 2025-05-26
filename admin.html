@@ -55,6 +55,15 @@
           </tr>`;
       });
     });
+    <script src="firebase-config.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
+<script>
+firebase.auth().onAuthStateChanged(function(user) {
+  if (!user) {
+    // Belum login, redirect ke halaman login
+    window.location.href = "login.html";
+  }
+});
   </script>
 </body>
 </html>
