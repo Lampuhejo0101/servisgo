@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servis Go - Dashboard Mekanik</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h2>Pesan Layanan Mekanik</h2>
+    <label>Alamat</label>
+    <input type="text" placeholder="Jl. Kemerdekaan No. 1">
+    <label>Layanan</label>
+    <select>
+      <option>Ganti Oli</option>
+      <option>Servis Ringan</option>
+    </select>
+    <label>Tanggal & Waktu</label>
+    <input type="datetime-local">
+    <br><br>
+    <button class="btn">Pesan Sekarang</button>
+  </div>
+
+  <div class="card">
+    <h2>Admin Panel</h2>
+    <p>Total Mekanik: 8 | Total Layanan: 10 | Total Booking: 24</p>
+    <table>
+      <tr><th>Pelanggan</th><th>Waktu</th><th>Status</th></tr>
+      <tr><td>Budi</td><td>10 Juni 2024 10:00</td><td>Sedang Dikerjakan</td></tr>
+      <tr><td>Sari</td><td>8 Juni 2024 18:00</td><td>Selesai</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Sedang Dikerjakan</h2>
+    <p><strong>Nama:</strong> Budi<br>
+    <strong>Alamat:</strong> Jl. Sudirman No. 5<br>
+    <strong>Layanan:</strong> Ganti Oli</p>
+    <h3>Checklist & Sparepart</h3>
+    <label><input type="checkbox"> Ganti Oli</label>
+    <label><input type="checkbox"> Cek Rem</label>
+    <label><input type="checkbox"> Tambah Angin</label>
+    <h4>Sparepart Digunakan:</h4>
+    <table>
+      <tr><th>Nama</th><th>Jumlah</th><th>Harga</th><th>Total</th></tr>
+      <tr><td>Oli Yamalube</td><td>1</td><td>Rp45.000</td><td>Rp45.000</td></tr>
+      <tr><td>Filter Oli</td><td>1</td><td>Rp15.000</td><td>Rp15.000</td></tr>
+      <tr><td colspan="3"><strong>Total</strong></td><td><strong>Rp60.000</strong></td></tr>
+    </table>
+    <br>
+    <button class="btn">Selesaikan Servis</button>
+  </div>
+</body>
+</html>
