@@ -5,13 +5,13 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
   const password = document.getElementById("password").value;
 
   if (!email || !password) {
-    alert("Email dan password wajib diisi");
+    alert("Email dan password wajib diisi!");
     return;
   }
 
   firebase.auth().signInWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      // LOGIN BERHASIL → REDIRECT KE ADMIN
+    .then(() => {
+      // Redirect ke admin setelah login berhasil
       window.location.href = "admin.html";
     })
     .catch((error) => {
